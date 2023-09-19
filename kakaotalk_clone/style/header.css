@@ -1,0 +1,22 @@
+.header{
+    height: 72px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    background-color: rgb(255, 255, 255);
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(51, 51, 51);
+}
+
+.left-section{
+    display: flex;
+    align-items: center;
+}
+s
+.kakao-logo{
+    height: 25px;
+    margin: 0px 60px;
+}
