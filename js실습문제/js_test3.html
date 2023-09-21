@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HTML태그에 접근하기</title>
+<style>
+    #area{
+        border:1px solid black;
+        height: 300px;
+        width: 500px;
+    }
+</style>
+</head>
+<body>
+<h2> 아래 입력창에 값을 입력하고 출력하기 버튼을 클릭하면 해당정보를 아래 영역에 표시해 주세요. </h2>
+<h3> 단, 구매자는 태그이름으로 접근, 상품명은 아이디로 접근, 구매가격은 name으로 접근할 것</h3>
+<p>구매자 : <input type="text"></p>
+<p>상품명 : <input type="text" id="product-name"></p>
+<p>가격 : <input type="text" name="price"></p>
+<div id = "area"></div>
+<button onclick="textPrint()">입력값 출력하기</button>
+<script>
+    function textPrint(){
+        let area = document.getElementById('area');
+        let list = document.getElementsByTagName('input');
+        let pname = document.getElementById('product-name');
+        let priceList = document.getElementsByName('price');
+        
+        area.innerText += list[0].value + ", ";
+        area.innerText += pname.value + ", ";
+        area.innerText += priceList[0].value+ ", ";
+    }
+</script>
+</body>
+</html>
