@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Practice2</h1>
+
+    <input type="number" id="value1">
+    <select >
+        <option name="option" value="+">+</option>
+        <option name="option" value="-">-</option>
+        <option name="option" value="*">*</option>
+        <option name="option" value="/">/</option>
+        <option name="option" value="%">%</option>
+    </select>
+    <input type="number" id="value2">
+    <button onclick="calculate()">=</button>
+    <div style="border: 1px solid; height: 21.330px; width: 170px; " id="area1"></div>
+    
+    <script>
+        function calculate(){
+            const value1 = document.getElementById("value1").value;
+            const value2 = document.getElementById("value2").value;
+            const area1 = document.getElementById("area1");
+
+            let operator = document.getElementsByTagName("select")[0];
+            
+            if(value1 != '0' && value2 != '0'){
+                switch (operator.value){
+                    case '+':
+                        area1.innerHTML += (parseInt(value1) + parseInt(value2));
+                    case '-':
+                        area1.innerHTML += (parseInt(value1) - parseInt(value2));
+                    case '*':
+                        area1.innerHTML += (parseInt(value1) * parseInt(value2));
+                    case '/':
+                        area1.innerHTML += (parseInt(value1) / parseInt(value2));
+                    case '%':
+                        area1.innerHTML += (parseInt(value1) % parseInt(value2));
+                }
+            } else {
+                area1.style.background = "red";
+                area1.style.color = "white";
+                area1.innerText += "연산불가";
+            }
+        }
+    </script>
+</body>
+</html>
