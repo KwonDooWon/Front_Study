@@ -27,25 +27,22 @@
             const area1 = document.getElementById("area1");
 
             let operator = document.getElementsByTagName("select")[0];
-            
-            if(value1 != '0' && value2 != '0'){
-                switch (operator.value){
-                    case '+':
-                        area1.innerHTML += (parseInt(value1) + parseInt(value2));
-                    case '-':
-                        area1.innerHTML += (parseInt(value1) - parseInt(value2));
-                    case '*':
-                        area1.innerHTML += (parseInt(value1) * parseInt(value2));
-                    case '/':
-                        area1.innerHTML += (parseInt(value1) / parseInt(value2));
-                    case '%':
-                        area1.innerHTML += (parseInt(value1) % parseInt(value2));
-                }
-            } else {
+            switch (operator.value){
+                case '+':
+                    area1.innerHTML += (parseInt(value1) + parseInt(value2));
+                case '-':
+                    area1.innerHTML += (parseInt(value1) - parseInt(value2));
+                case '*':
+                    area1.innerHTML += (parseInt(value1) * parseInt(value2));
+                case '/':
+                    area1.innerHTML += (parseInt(value1) / parseInt(value2));
+                case '%':
+                    area1.innerHTML += (parseInt(value1) % parseInt(value2));
+            }
+           
                 area1.style.background = "red";
                 area1.style.color = "white";
                 area1.innerText += "연산불가";
-            }
         }
     </script>
 </body>
