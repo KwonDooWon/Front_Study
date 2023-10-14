@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .area1{
+            background-color: orange;
+            color: white;
+            text-align: center;
+        }
+        .area2{
+            background-color: bisque;
+        }
+        .area3{
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <form action="insert.no" method="post">
+        <fieldset>
+            <legend>
+                공지사항 작성하기
+            </legend>
+            <div>
+                제목 <input type="text" name="title" placeholder="제목을 입력하시오.">
+            </div>
+            <div>
+                내용 <input type="text" name="content" id="content" placeholder="내용을 입력하시오." style="width: 300px; height: 200px;">
+            </div>
+            <div>
+                첨부파일 <input type="file" name="uploadFile">
+            </div>
+            <div style="text-align: center;">
+                <input type="button" value="작성하기">
+            </div>
+        </fieldset>
+    </form>
+    <br>
+    <hr>
+    <br>
+    <table border="1px">
+        <thead class="area1">
+            <tr>
+                <th>번호</th>
+                <th colspan="2">제목</th>
+                <th>작성자</th>
+                <th>작성일</th>
+                <th>조회수</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="area2">9</td>
+                <td class="area2">공지사항 제목 9</td>
+                <td><button>바로가기</button></td>
+                <td class="area2">user01</td>
+                <td class="area2">2021-03-29</td>
+                <td class="area2">34</td>
+            </tr>
+            <tr>
+                <td class="area2">6</td>
+                <td class="area2">공지사항 제목 6</td>
+                <td><button>바로가기</button></td>
+                <td class="area2">answ445</td>
+                <td class="area2">2021-03-12</td>
+                <td class="area2">67</td>
+            </tr>
+            <tr>
+                <td class="area2">3</td>
+                <td class="area2">공지사항 제목 3</td>
+                <td><button>바로가기</button></td>
+                <td class="area2">testg12</td>
+                <td class="area2">2021-03-01</td>
+                <td class="area2">98</td>
+            </tr>
+            <tr>
+                <td class="area2">2</td>
+                <td class="area2">공지사항 제목 2</td>
+                <td><button>바로가기</button></td>
+                <td class="area2">palw3</td>
+                <td class="area2">2021-01-02</td>
+                <td class="area2">85</td>
+            </tr>
+            <tr>
+                <td class="area2">1</td>
+                <td class="area2">공지사항 제목 1</td>
+                <td><button>바로가기</button></td>
+                <td class="area2">xml23</td>
+                <td class="area2">2021-12-24</td>
+                <td class="area2">124</td>
+            </tr>
+            <tr>
+                <td colspan="4" class="area1">전체공지사항 갯수</td>
+                <td colspan="2" class="area1">5개</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
